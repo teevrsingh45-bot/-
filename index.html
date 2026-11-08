@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Happy Diwali Tanu Sis ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#100d2b;color:white;
+ font-family:Arial,sans-serif;overflow:hidden;
+}
+.scene{
+ height:100dvh;width:100%;position:relative;
+ overflow:hidden;
+ background:linear-gradient(#100d35 0%,#462044 65%,#e47743 100%);
+ perspective:900px;
+}
+.stars{
+ position:absolute;inset:0;
+ background-image:
+ radial-gradient(white 1px,transparent 1px),
+ radial-gradient(#ffdb85 1px,transparent 1px);
+ background-size:53px 53px,87px 87px;
+ animation:twinkle 3s infinite alternate;
+}
+@keyframes twinkle{to{opacity:.4}}
+.moon{
+ position:absolute;right:12%;top:9%;
+ width:65px;height:65px;border-radius:50%;
+ background:#fff0b6;box-shadow:0 0 45px #ffcf70;
+}
+.heading{
+ position:absolute;top:4%;width:100%;z-index:5;
+ text-align:center;color:#ffe6a0;
+ text-shadow:0 0 15px #ff8b35;
+ font-size:clamp(22px,6vw,34px);
+}
+.heading small{display:block;font-size:14px;color:white;margin-top:5px}
+.ground{
+ position:absolute;bottom:0;width:100%;height:28%;
+ background:linear-gradient(#6e3151,#26152e);
+ border-top:5px solid #e9a15c;
+}
+.house{
+ position:absolute;bottom:23%;left:50%;
+ transform:translateX(-50%);
+ width:min(78%,390px);height:39%;
+ background:linear-gradient(90deg,#b84d36,#e18a4c,#b84d36);
+ border:5px solid #f6bd70;
+ border-radius:8px 8px 0 0;
+ box-shadow:0 0 30px #ff984e;
+}
+.roof{
+ position:absolute;top:-65px;left:-7%;width:114%;
+ height:70px;background:#9c3f32;
+ clip-path:polygon(50% 0,100% 100%,0 100%);
+}
+.roof:after{
+ content:"";position:absolute;inset:0;
+ background:linear-gradient(90deg,#ffcb6c,#a83b32,#ffcb6c);
+}
+.window{
+ position:absolute;top:25%;width:19%;height:32%;
+ background:#40203b;border:5px solid #ffcb76;
+ box-shadow:inset 0 0 20px #ffae45;
+}
+.w1{left:8%}.w2{right:8%}
+.door-frame{
+ position:absolute;bottom:0;left:36%;width:28%;height:72%;
+ background:#f9c47a;padding:5px;
+}
+.door{
+ height:100%;width:100%;background:#48202e;
+ transform-origin:left;transition:transform 2s;
+ border:3px solid #ffdc8a;
+ position:relative;
+}
+.door.open{transform:perspective(500px) rotateY(-115deg)}
+.door:after{
+ content:"";position:absolute;right:12%;top:50%;
+ width:9px;height:9px;border-radius:50%;background:gold;
+}
+.path{
+ position:absolute;bottom:0;left:50%;
+ transform:translateX(-50%);
+ width:55%;height:24%;
+ background:linear-gradient(90deg,#a65b49,#e8a56a,#a65b49);
+ clip-path:polygon(35% 0,65% 0,100% 100%,0 100%);
+}
+.person{
+ position:absolute;bottom:15%;z-index:4;
+ font-size:clamp(43px,12vw,75px);
+ filter:drop-shadow(0 5px 5px #170c20);
+ transition:left 3s ease,bottom 2s;
+}
+.boy{left:-100px}
+.girl{left:-130px}
+.boy.inside{left:43%;bottom:31%}
+.girl.inside{left:55%;bottom:31%}
+.diya-row{
+ position:absolute;bottom:5%;width:100%;
+ display:flex;justify-content:space-around;
+ opacity:0;transition:opacity 2s;
+}
+.diya{font-size:30px;filter:drop-shadow(0 0 12px orange)}
+.diya-row.show{opacity:1}
+.flame{animation:flicker .3s infinite alternate}
+@keyframes flicker{to{transform:scale(1.2) rotate(5deg)}}
+.message{
+ position:absolute;z-index:8;top:16%;left:5%;
+ width:90%;padding:18px 12px;
+ text-align:center;
+ border:1px solid #ffc76b;
+ border-radius:20px;
+ background:#271331eF;
+ box-shadow:0 0 30px #ff9b4c;
+ opacity:0;transform:scale(.7);
+ transition:1.5s;
+}
+.message.show{opacity:1;transform:scale(1)}
+.message h2{color:#ffdb83;font-size:25px}
+.message p{line-height:1.7;font-size:15px}
+button{
+ border:0;border-radius:30px;padding:13px 22px;
+ background:linear-gradient(90deg,#ffbd52,#ffdf92);
+ color:#4b1d29;font-size:15px;font-weight:bold;
+ box-shadow:0 0 20px #ffb74d;cursor:pointer;
+}
+#start{
+ position:absolute;z-index:10;bottom:7%;left:50%;
+ transform:translateX(-50%);
+ white-space:nowrap;
+}
+#sound{
+ position:absolute;z-index:10;top:12px;right:12px;
+ padding:9px 13px;font-size:12px;
+}
+.fireworks{
+ position:absolute;inset:0;pointer-events:none;
+ z-index:6;
+}
+.spark{
+ position:absolute;font-size:25px;
+ animation:boom 1.4s ease-out forwards;
+}
+@keyframes boom{
+ 0%{transform:scale(.1);opacity:0}
+ 30%{transform:scale(1.5);opacity:1}
+ 100%{transform:scale(2.5);opacity:0}
+}
+@media(max-height:650px){
+ .house{height:35%;bottom:22%}
+ .message{top:13%;padding:8px}
+ .message p{font-size:13px}
+}
+</style>
+</head>
+<body>
+<div class="scene">
+ <div class="stars"></div>
+ <div class="moon"></div>
+
+ <div class="heading">
+  🪔 Happy Diwali 🪔
+  <small>A Special Surprise For Tanu Sis ❤️</small>
+ </div>
+
+ <div class="house">
+  <div class="roof"></div>
+  <div class="window w1"></div>
+  <div class="window w2"></div>
+  <div class="door-frame">
+   <div class="door" id="door"></div>
+  </div>
+ </div>
+
+ <div class="path"></div>
+ <div class="ground"></div>
+
+ <div class="person boy" id="boy">🧑🏻</div>
+ <div class="person girl" id="girl">👧🏻</div>
+
+ <div class="diya-row" id="diyas">
+  <span class="diya">🪔</span>
+  <span class="diya">🪔</span>
+  <span class="diya">🪔</span>
+  <span class="diya">🪔</span>
+  <span class="diya">🪔</span>
+ </div>
+
+ <div class="fireworks" id="fireworks"></div>
+
+ <div class="message" id="message">
+  <h2>❤️ Dear Tanu Sis ❤️</h2>
+  <p>
+   इस दिवाली बस इतनी सी दुआ है,<br>
+   आपकी जिंदगी में खुशियों का उजाला रहे।<br>
+   चेहरे पर हमेशा मुस्कान रहे,<br>
+   और हर सपना आपका पूरा हो।<br><br>
+   आप हमेशा खुश रहो Sis,<br>
+   आपका भाई हमेशा आपके साथ है। ❤️
+  </p>
+  <h2>✨ Happy Diwali ✨</h2>
+ </div>
+
+ <button id="sound" onclick="toggleMusic()">🔊 Music ON</button>
+ <button id="start" onclick="startShow()">Open Your Surprise ❤️</button>
+</div>
+
+<script>
+let audioCtx=null, musicTimer=null, musicOn=true;
+let noteIndex=0;
+
+// Original synthesized festive melody
+const melody=[
+ [523,0.3],[659,0.3],[784,0.4],[659,0.3],
+ [587,0.3],[698,0.3],[880,0.5],[784,0.4],
+ [659,0.3],[784,0.3],[1046,0.5],[784,0.4],
+ [698,0.3],[784,0.3],[659,0.5],[523,0.5]
+];
+
+function bell(freq,time,duration){
+ if(!audioCtx || !musicOn)return;
+ const osc=audioCtx.createOscillator();
+ const gain=audioCtx.createGain();
+ osc.type="sine";
+ osc.frequency.value=freq;
+ gain.gain.setValueAtTime(0.0001,time);
+ gain.gain.exponentialRampToValueAtTime(.09,time+.03);
+ gain.gain.exponentialRampToValueAtTime(.0001,time+duration);
+ osc.connect(gain);
+ gain.connect(audioCtx.destination);
+ osc.start(time);
+ osc.stop(time+duration+.05);
+}
+function playMelody(){
+ if(!audioCtx || !musicOn)return;
+ let now=audioCtx.currentTime;
+ let t=0;
+ melody.forEach(n=>{
+  bell(n[0],now+t,n[1]);
+  bell(n[0]*2,now+t,.22);
+  t+=.35;
+ });
+}
+function startMusic(){
+ if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();
+ audioCtx.resume();
+ if(musicTimer)clearInterval(musicTimer);
+ musicOn=true;
+ playMelody();
+ musicTimer=setInterval(playMelody,5600);
+ document.getElementById("sound").innerText="🔊 Music ON";
+}
+function toggleMusic(){
+ if(!audioCtx)startMusic();
+ else{
+  musicOn=!musicOn;
+  if(musicOn){
+   audioCtx.resume();playMelody();
+   musicTimer=setInterval(playMelody,5600);
+  }else{
+   clearInterval(musicTimer);
+   audioCtx.suspend();
+  }
+  document.getElementById("sound").innerText=
+  musicOn?"🔊 Music ON":"🔇 Music OFF";
+ }
+}
+function fireworks(){
+ const area=document.getElementById("fireworks");
+ const s=document.createElement("div");
+ s.className="spark";
+ s.innerText=["🎆","✨","🎇","🌟"][Math.floor(Math.random()*4)];
+ s.style.left=(10+Math.random()*80)+"%";
+ s.style.top=(12+Math.random()*55)+"%";
+ area.appendChild(s);
+ setTimeout(()=>s.remove(),1500);
+}
+function startShow(){
+ startMusic();
+ document.getElementById("start").style.display="none";
+
+ setTimeout(()=>{
+  document.getElementById("boy").classList.add("inside");
+  document.getElementById("girl").classList.add("inside");
+ },500);
+
+ setTimeout(()=>{
+  document.getElementById("door").classList.add("open");
+ },1300);
+
+ setTimeout(()=>{
+  document.getElementById("diyas").classList.add("show");
+ },4200);
+
+ setTimeout(()=>{
+  document.getElementById("message").classList.add("show");
+ },5700);
+
+ setInterval(fireworks,650);
+}
+</script>
+</body>
+</html>
